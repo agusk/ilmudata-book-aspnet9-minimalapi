@@ -1,0 +1,28 @@
+2025-08-20 04:29:06.091 +07:00 [INF] Now listening on: https://localhost:7151
+2025-08-20 04:29:06.110 +07:00 [INF] Now listening on: http://localhost:5013
+2025-08-20 04:29:06.111 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-20 04:29:06.112 +07:00 [INF] Hosting environment: Development
+2025-08-20 04:29:06.113 +07:00 [INF] Content root path: D:\GitHub\ilmudata-books\webapi9\codes\exceptionhandlingapi
+2025-08-20 04:29:24.971 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5013/causeinternalerror - null null
+2025-08-20 04:29:25.026 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5013/causeinternalerror - 307 0 null 56.733ms
+2025-08-20 04:29:25.052 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7151/causeinternalerror - null null
+2025-08-20 04:29:25.056 +07:00 [INF] Executing endpoint 'HTTP: GET /causeinternalerror'
+2025-08-20 04:29:25.057 +07:00 [INF] Executed endpoint 'HTTP: GET /causeinternalerror'
+2025-08-20 04:29:25.058 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Internal server error.
+   at Program.<>c.<<Main>$>b__0_1() in D:\GitHub\ilmudata-books\webapi9\codes\exceptionhandlingapi\Program.cs:line 64
+   at lambda_method2(Closure, Object, HttpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.Invoke(HttpContext context)
+2025-08-20 04:29:25.086 +07:00 [INF] Executing endpoint 'HTTP: GET /error'
+2025-08-20 04:29:25.088 +07:00 [ERR] An error occurred: Internal server error.
+System.Exception: Internal server error.
+   at Program.<>c.<<Main>$>b__0_1() in D:\GitHub\ilmudata-books\webapi9\codes\exceptionhandlingapi\Program.cs:line 64
+   at lambda_method2(Closure, Object, HttpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.Invoke(HttpContext context)
+2025-08-20 04:29:25.091 +07:00 [INF] Setting HTTP status code 500.
+2025-08-20 04:29:25.100 +07:00 [INF] Writing value of type 'ProblemDetails' as Json.
+2025-08-20 04:29:25.104 +07:00 [INF] Executed endpoint 'HTTP: GET /error'
+2025-08-20 04:29:25.105 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7151/causeinternalerror - 500 null application/problem+json 52.687ms
+2025-08-20 04:31:44.804 +07:00 [INF] Application is shutting down...

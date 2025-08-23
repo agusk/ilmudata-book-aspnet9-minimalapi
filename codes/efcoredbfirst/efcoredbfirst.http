@@ -1,0 +1,40 @@
+@efcoredbfirst_HostAddress = http://localhost:5136
+
+GET {{efcoredbfirst_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+### Get all
+GET {{efcoredbfirst_HostAddress}}/products
+Accept: application/json
+
+### Get by id
+
+GET {{efcoredbfirst_HostAddress}}/products/1 
+Accept: application/json
+
+### Create
+
+POST {{efcoredbfirst_HostAddress}}/products
+Content-Type: application/json
+
+{
+  "name": "Product 4",
+  "price": 100
+}
+
+###
+PUT {{efcoredbfirst_HostAddress}}/products/1
+Content-Type: application/json
+
+{
+  "name": "Product 41edit",
+  "price": 100
+}
+
+### Delete by id
+
+DELETE {{efcoredbfirst_HostAddress}}/products/2 
+Accept: application/json
+
+###

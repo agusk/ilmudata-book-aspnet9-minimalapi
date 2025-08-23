@@ -1,0 +1,70 @@
+@rbacapp_HostAddress = http://localhost:5239
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJ1c2VyMSIsImV4cCI6MTc1NTkyMzE0OX0.hn0ZqKaaDi3jZqlm368UkzMzf8DkT3k0L36QpCHbmTo
+
+GET {{rbacapp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+### setup roles
+GET {{rbacapp_HostAddress}}/setuproles
+Accept: application/json
+Content-Type: application/json
+
+
+### add role User1
+GET {{rbacapp_HostAddress}}/addrole/user1/role/admin
+Accept: application/json
+Content-Type: application/json
+
+### add role User2
+GET {{rbacapp_HostAddress}}/addrole/user2/role/manager
+Accept: application/json
+Content-Type: application/json
+
+
+### register
+POST {{rbacapp_HostAddress}}/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Email": "user3@email.com",
+  "Password": "pass123",
+  "Username": "user3",
+  "Name": "User 3"
+}
+
+### login
+POST {{rbacapp_HostAddress}}/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Password": "pass123",
+  "Username": "user1"
+}
+
+
+###
+GET {{rbacapp_HostAddress}}/profile
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+GET {{rbacapp_HostAddress}}/manager
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+GET {{rbacapp_HostAddress}}/admin
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+GET {{rbacapp_HostAddress}}/adminmanager
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
