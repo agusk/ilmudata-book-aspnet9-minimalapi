@@ -50,6 +50,6 @@ You can buy this book the following online stores:
 
 * Google Play Books: https://play.google.com/store/books/details?id=dN9_EQAAQBAJ
 * Lulu: https://www.lulu.com/shop/agus-kurniawan/hallo-net-90-practical-aspnet-core-minimal-api/ebook/product-yvg86pg.html
-* Apple iBookstore: http://books.apple.com/us/book/id6751894010
+* Apple iBookstore: https://books.apple.com/us/book/id6751894010
 * Leanpub: https://leanpub.com/aspnet9minimalapi 
 * Others: https://books2read.com/u/baOPj2 
